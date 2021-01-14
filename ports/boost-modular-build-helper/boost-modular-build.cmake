@@ -217,6 +217,7 @@ function(boost_modular_build)
         "-sLZMA_INCLUDE=${CURRENT_INSTALLED_DIR}/include"
         "-sZSTD_INCLUDE=${CURRENT_INSTALLED_DIR}/include"
         threading=multi
+        define=BOOST_SYSTEM_USE_UTF8
     )
     if(NOT VCPKG_CMAKE_SYSTEM_NAME OR VCPKG_CMAKE_SYSTEM_NAME STREQUAL "WindowsStore")
         list(APPEND B2_OPTIONS threadapi=win32)
